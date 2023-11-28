@@ -65,7 +65,7 @@ from diagrams.aws.database import Redshift
 from diagrams.aws.integration import SQS
 from diagrams.aws.storage import S3
 
-with Diagram("Event Processing", show=False):
+with Diagram("Event Processing", show=False, graph_attr={"labelloc": "t"}):
     source = EKS("EKS source")
 
     with Cluster("Event Flows"):
