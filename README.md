@@ -31,19 +31,19 @@ from diagrams.aws.network import ELB
 from diagrams.aws.network import Route53
 
 with Diagram("Clustered Web Services", show=False, direction="TB"):
-    dns = Route53("dns")
-    lb = ELB("lb")
+    dns = Route53("AWS Route53")
+    lb = ELB("AWS ELB")
 
-    with Cluster("Services"):
-        svc_group = [ECS("web1"),
-                     ECS("web2"),
-                     ECS("web3")]
+    with Cluster("Services(on ECS)"):
+        svc_group = [ECS("service1"),
+                     ECS("service2"),
+                     ECS("service3")]
 
     with Cluster("DB Cluster"):
-        db_primary = RDS("userdb")
-        db_primary - [RDS("userdb ro")]
+        db_primary = RDS("RDS")
+        db_primary - [RDS("RDS ReadOnly")]
 
-    memcached = ElastiCache("memcached")
+    memcached = ElastiCache("ElastiCache")
 
     dns >> lb >> svc_group
     svc_group >> db_primary
