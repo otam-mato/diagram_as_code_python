@@ -83,11 +83,11 @@ sudo apt-get install graphviz
 ### 4. Launch the script 
 
 ```py
-sudo apt-get install graphviz
+python3 diagr.py
 ```
 
-### 5. Launch the script 
+### 5. Open the generated .png file to check the diagram (I am using the default image viewer in Ubuntu called "Eye of GNOME" (eog))
 
 ```py
-sudo apt-get install graphviz
+eog ecs_clustered_services.png
 ```
