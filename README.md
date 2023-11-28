@@ -60,29 +60,33 @@ with Diagram("ECS Clustered Services", show=False, direction="TB", graph_attr={"
 
 ```python3
 from diagrams import Cluster, Diagram
-from diagrams.aws.compute import ECS
-from diagrams.aws.database import ElastiCache, RDS
-from diagrams.aws.network import ELB
-from diagrams.aws.network import Route53
+from diagrams.aws.compute import ECS, EKS, Lambda
+from diagrams.aws.database import Redshift
+from diagrams.aws.integration import SQS
+from diagrams.aws.storage import S3
 
-with Diagram("ECS Clustered Services", show=False, direction="TB", graph_attr={"labelloc": "t"}):
-    dns = Route53("AWS Route53")
-    lb = ELB("AWS ELB")
+with Diagram("Event Processing", show=False):
+    source = EKS("EKS source")
 
-    with Cluster("ECS cluster"):
-        svc_group = [ECS("web1"),
-                     ECS("web2"),
-                     ECS("web3")]
+    with Cluster("Event Flows"):
+        with Cluster("Event Workers"):
+            workers = [ECS("service1"),
+                       ECS("service2"),
+                       ECS("service3")]
 
-    with Cluster("AWS RDS Cluster"):
-        db_primary = RDS("RDS")
-        db_primary - [RDS("RDS ReadOnly")]
+        queue = SQS("event queue")
 
-    memcached = ElastiCache("AWS ElastiCache")
+        with Cluster("Processing"):
+            handlers = [Lambda("process1"),
+                        Lambda("process2"),
+                        Lambda("process3")]
 
-    dns >> lb >> svc_group
-    svc_group >> db_primary
-    svc_group >> memcached
+    store = S3("S3")
+    dw = Redshift("Redshift")
+
+    source >> workers >> queue >> handlers
+    handlers >> store
+    handlers >> dw
 ```
 
 <br>
