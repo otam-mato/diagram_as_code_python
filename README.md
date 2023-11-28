@@ -52,6 +52,41 @@ with Diagram("ECS Clustered Services", show=False, direction="TB", graph_attr={"
 
 <br>
 
+## 1. A clustered architecture example
+
+<img width="1269" alt="Screenshot 2023-11-28 at 18 11 30" src="https://github.com/otam-mato/diagram_as_code_python/assets/113034133/03998a26-d776-4dd6-bbdf-6e1d31a90796">
+
+<br><br>
+
+```python3
+from diagrams import Cluster, Diagram
+from diagrams.aws.compute import ECS
+from diagrams.aws.database import ElastiCache, RDS
+from diagrams.aws.network import ELB
+from diagrams.aws.network import Route53
+
+with Diagram("ECS Clustered Services", show=False, direction="TB", graph_attr={"labelloc": "t"}):
+    dns = Route53("AWS Route53")
+    lb = ELB("AWS ELB")
+
+    with Cluster("ECS cluster"):
+        svc_group = [ECS("web1"),
+                     ECS("web2"),
+                     ECS("web3")]
+
+    with Cluster("AWS RDS Cluster"):
+        db_primary = RDS("RDS")
+        db_primary - [RDS("RDS ReadOnly")]
+
+    memcached = ElastiCache("AWS ElastiCache")
+
+    dns >> lb >> svc_group
+    svc_group >> db_primary
+    svc_group >> memcached
+```
+
+<br>
+
 ## Prerequisites
 
 - **Python 3** installed.
