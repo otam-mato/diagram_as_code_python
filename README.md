@@ -17,7 +17,7 @@
 
 
 
-## 1. 
+## 1. A clustered architecture example
 
 <img width="1269" alt="Screenshot 2023-11-28 at 18 11 30" src="https://github.com/otam-mato/diagram_as_code_python/assets/113034133/03998a26-d776-4dd6-bbdf-6e1d31a90796">
 
