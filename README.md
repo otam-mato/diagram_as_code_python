@@ -93,6 +93,7 @@ with Diagram("Event Processing", show=False, graph_attr={"labelloc": "t"}):
 
 ## Prerequisites
 
+- **A work station / Virtual machine (I am using UBUNTU 22.04)**
 - **Python 3** installed.
 - **pip** installed.
 
