@@ -52,9 +52,9 @@ with Diagram("ECS Clustered Services", show=False, direction="TB", graph_attr={"
 
 <br>
 
-## 1. Event Processing on AWS example
+## 2. Event Processing on AWS example
 
-<img width="1269" alt="Screenshot 2023-11-28 at 18 11 30" src="https://github.com/otam-mato/diagram_as_code_python/assets/113034133/03998a26-d776-4dd6-bbdf-6e1d31a90796">
+<img width="1269" alt="Screenshot 2023-11-28 at 19 33 44" src="https://github.com/otam-mato/diagram_as_code_python/assets/113034133/508cfce0-aa89-4af7-991b-fafa553d4126">
 
 <br><br>
 
