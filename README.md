@@ -50,27 +50,28 @@ with Diagram("ECS Clustered Services", show=False, direction="TB", graph_attr={"
     svc_group >> memcached
 ```
 
+<br>
+
 ## Prerequisites
 
 - **Python 3** installed.
 - **pip** installed.
-- **pip install diagrams**
 - **sudo apt-get install graphviz**
 - **export PATH="/usr/bin:$PATH"**
 - **python3 diagr.py**
 
-
-
-
+<br>
 
 ## Steps:
 
-### 1. Create the deployment of V1 of the app
+### 1. Install `diagrams` module
 
-- **[Download the manifest 'deployment_app_v1.yml'](https://github.com/otam-mato/nodejs_mysql_web_app_kubernetes/blob/66874767022185dcf7c7eae0c8bc2967ec60dcea/deployment_app_v1.yml)**
+```py
+pip install diagrams
+```
 
-- **Apply it**:
+### 2. Install `diagrams` module
 
-```yml
-kubectl apply -f deployment_app_v1.yaml
+```py
+sudo apt-get install graphviz
 ```
