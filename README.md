@@ -49,3 +49,22 @@ with Diagram("ECS Clustered Services", show=False, direction="TB", graph_attr={"
     svc_group >> db_primary
     svc_group >> memcached
 ```
+
+## Prerequisites
+
+- **Python 3** installed.
+- **pip** installed.
+- **pip install diagrams**
+
+
+## Steps:
+
+### 1. Create the deployment of V1 of the app
+
+- **[Download the manifest 'deployment_app_v1.yml'](https://github.com/otam-mato/nodejs_mysql_web_app_kubernetes/blob/66874767022185dcf7c7eae0c8bc2967ec60dcea/deployment_app_v1.yml)**
+
+- **Apply it**:
+
+```yml
+kubectl apply -f deployment_app_v1.yaml
+```
