@@ -105,7 +105,7 @@ with Diagram("Event Processing", show=False, graph_attr={"labelloc": "t"}):
 ```py
 pip install diagrams
 ```
-The "diagrams" library in Python is often used for creating infrastructure-as-code diagrams.
+The "diagrams" library in Python is used for creating infrastructure-as-code diagrams.
 
 ### 2. Install `graphviz` 
 
