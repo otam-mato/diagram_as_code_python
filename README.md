@@ -56,9 +56,6 @@ with Diagram("ECS Clustered Services", show=False, direction="TB", graph_attr={"
 
 - **Python 3** installed.
 - **pip** installed.
-- **sudo apt-get install graphviz**
-- **export PATH="/usr/bin:$PATH"**
-- **python3 diagr.py**
 
 <br>
 
