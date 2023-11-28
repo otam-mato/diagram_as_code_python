@@ -76,7 +76,7 @@ pip install diagrams
 sudo apt-get install graphviz
 ```
 
-### 3. Create the script 
+### 3. Create or copy the script 
 
 [ diagr.py ](https://github.com/otam-mato/diagram_as_code_python/blob/94db1bc5becec7e0d012f556d74c4608f5aebab9/diagr.py)
 
