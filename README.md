@@ -64,13 +64,29 @@ with Diagram("ECS Clustered Services", show=False, direction="TB", graph_attr={"
 
 ## Steps:
 
-### 1. Install `diagrams` module
+### 1. Install the `diagrams` module
 
 ```py
 pip install diagrams
 ```
 
-### 2. Install `diagrams` module
+### 2. Install `graphviz` 
+
+```py
+sudo apt-get install graphviz
+```
+
+### 3. Create the script 
+
+[diagr.py] ()
+
+### 4. Launch the script 
+
+```py
+sudo apt-get install graphviz
+```
+
+### 5. Launch the script 
 
 ```py
 sudo apt-get install graphviz
