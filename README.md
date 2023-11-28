@@ -66,6 +66,7 @@ with Diagram("ECS Clustered Services", show=False, direction="TB", graph_attr={"
 ```py
 pip install diagrams
 ```
+The "diagrams" library in Python is often used for creating infrastructure-as-code diagrams.
 
 ### 2. Install `graphviz` 
 
