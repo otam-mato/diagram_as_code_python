@@ -72,7 +72,7 @@ pip install diagrams
 ```py
 sudo apt-get install graphviz
 ```
-Graphviz is an open-source software tool used for the visualization of graphs and networks. A graph, in this context, refers to a collection of nodes and edges that connect pairs of nodes. 
+`Graphviz` is an open-source software tool used for the visualization of graphs and networks. A graph, in this context, refers to a collection of nodes and edges that connect pairs of nodes. 
 
 ### 3. Create or copy the script 
 
