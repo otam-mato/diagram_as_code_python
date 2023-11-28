@@ -74,7 +74,7 @@ with Diagram("Event Processing", show=False, graph_attr={"labelloc": "t"}):
                        ECS("service2"),
                        ECS("service3")]
 
-        queue = SQS("event queue")
+        queue = SQS("AWS SQS event queue")
 
         with Cluster("Processing"):
             handlers = [Lambda("process1"),
