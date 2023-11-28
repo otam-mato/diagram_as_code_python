@@ -1,4 +1,4 @@
-# diagram_as_code_python
+# Diagram As Code (python)
 
 <br>
 
