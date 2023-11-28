@@ -21,6 +21,8 @@
 
 <img width="1269" alt="Screenshot 2023-11-28 at 17 33 31" src="https://github.com/otam-mato/diagram_as_code_python/assets/113034133/d3635d21-3968-4b3f-8f9d-423f0e04d93f">
 
+<br><br>
+
 ```python3
 from diagrams import Cluster, Diagram
 from diagrams.aws.compute import ECS
@@ -28,7 +30,7 @@ from diagrams.aws.database import ElastiCache, RDS
 from diagrams.aws.network import ELB
 from diagrams.aws.network import Route53
 
-with Diagram("Clustered Web Services", show=False):
+with Diagram("Clustered Web Services", show=False, direction="TB"):
     dns = Route53("dns")
     lb = ELB("lb")
 
