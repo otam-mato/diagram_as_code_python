@@ -78,7 +78,7 @@ sudo apt-get install graphviz
 
 ### 3. Create the script 
 
-[diagr.py] ()
+[ diagr.py ] ()
 
 ### 4. Launch the script 
 
