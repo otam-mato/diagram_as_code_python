@@ -19,7 +19,7 @@
 
 ## 1. 
 
-<img width="1269" alt="Screenshot 2023-11-28 at 17 33 31" src="https://github.com/otam-mato/diagram_as_code_python/assets/113034133/d3635d21-3968-4b3f-8f9d-423f0e04d93f">
+<img width="1269" alt="Screenshot 2023-11-28 at 18 00 43" src="https://github.com/otam-mato/diagram_as_code_python/assets/113034133/6eac2c55-9016-4521-bad8-3f710258c7c6">
 
 <br><br>
 
